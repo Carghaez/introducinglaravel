@@ -14,3 +14,20 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/cities/{city}',
+           'ProvaController@test'
+);
+
+Route::get('/posts/create/{user}/{contents}',
+           'PostController@createPost'
+);
+
+Route::get('/posts/{post}/comments',
+          'PostController@getComments'
+);
+
+Route::get('/posts/{post_id}/comments/{user}/{contents}',
+           'PostController@createComment'
+);
+
