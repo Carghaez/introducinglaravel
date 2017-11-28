@@ -39,4 +39,12 @@ class PostController extends Controller
     {
       return $post->comments()->get();
     }
+
+    function getPosts()
+    {
+      $posts = Post::with('owner')->get();
+      return view('posts_natale', [
+        'posts' => $posts
+      ]);
+    }
 }

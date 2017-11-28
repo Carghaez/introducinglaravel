@@ -22,4 +22,9 @@ class Post extends Model
     {
         return $this->hasMany('App\Comment');
     }
+
+    public function owner()
+    {
+        return $this->belongsTo('App\User');
+    }
 }

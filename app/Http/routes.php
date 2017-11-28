@@ -31,3 +31,4 @@ Route::get('/posts/{post_id}/comments/{user}/{contents}',
            'PostController@createComment'
 );
 
+Route::get('/posts', 'PostController@getPosts');
